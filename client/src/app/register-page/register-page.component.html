@@ -1,0 +1,31 @@
+<form
+  class="card"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()">
+  <div class="card-content">
+    <span class="card-title">Создать аккаунт</span>
+    <div class="input-field">
+      <input formControlName="login" id="login" type="text" required>
+      <label for="login">Логин:</label>
+    </div>
+    <div class="input-field">
+      <input formControlName="password" id="password" type="password" required>
+      <label for="password">Пароль:</label>
+    </div>
+    <div class="input-field">
+      <input formControlName="first_name" id="first_name" type="text" required>
+      <label for="first_name">Имя:</label>
+    </div>
+    <div class="input-field">
+      <input formControlName="second_name" id="second_name" type="text" required>
+      <label for="second_name">Фамилия:</label>
+    </div>
+    <div class="input-field">
+      <input formControlName="description" id="description" type="text" required>
+      <label for="description">Описание:</label>
+    </div>
+  </div>
+  <div class="card-action">
+    <button type="submit" class="modal-action btn waves-effect" [disabled]="form.disabled">Создать</button>
+  </div>
+</form>
