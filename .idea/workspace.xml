@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="844192ad-448d-418e-91c0-418b4ad958d8" name="Default Changelist" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/client/src/app/document-page/document-form/document-form.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/document-page/document-form/document-form.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/document-page/document-form/document-form.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/document-page/document-page.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/document-page/document-page.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/document-page/document-page.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/educational_program-page/educational-program-form/educational-program-form.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/educational_program-page/educational-program-form/educational-program-form.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/educational_program-page/educational-program-form/educational-program-form.component.ts" afterDir="false" />
+    <list default="true" id="844192ad-448d-418e-91c0-418b4ad958d8" name="Default Changelist" comment="add client">
       <change afterPath="$PROJECT_DIR$/client/src/app/educational_program-page/educational-program-form/file/09.03.01_kompyuternye_sistemy_i_tehnologii.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/src/app/educational_program-page/educational-program-form/working-program-page/working-program-form/working-program-form.component.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/src/app/educational_program-page/educational-program-form/working-program-page/working-program-form/working-program-form.component.html" afterDir="false" />
@@ -51,41 +42,10 @@
       <change afterPath="$PROJECT_DIR$/routes/document.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/uploads/09.03.01_kompyuternye_sistemy_i_tehnologii.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <list id="05beb44b-e647-4f29-b45f-2b32a9370e96" name="Revert &quot;add client&quot;" comment="Revert &quot;add client&quot;&#10;&#10;This reverts commit 99c54d0c">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/e2e/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/e2e/protractor.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/login-page/login-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login-page/login-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login-page/login-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/register-page/register-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/register-page/register-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/layouts/auth-layout/auth-layout.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/layouts/auth-layout/auth-layout.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/layouts/auth-layout/auth-layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/layouts/auth-layout/auth-layout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/layouts/auth-layout/auth-layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/layouts/auth-layout/auth-layout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/layouts/site-layout/site-layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/layouts/site-layout/site-layout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/layouts/site-layout/site-layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/layouts/site-layout/site-layout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/theme/fullstack-theme-master/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/theme/fullstack-theme-master/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/theme/fullstack-theme-master/styles/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/theme/fullstack-theme-master/styles/materialize.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/educational_program.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/educational_program.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/working_program.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/working_program.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/EducationalProgram.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/EducationalProgram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/WorkingProgram.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/WorkingProgram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/educational_program.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/educational_program.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/working_program.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/working_program.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +179,7 @@
       <workItem from="1622228154469" duration="2032000" />
       <workItem from="1622399661713" duration="183000" />
       <workItem from="1622400561551" duration="6589000" />
-      <workItem from="1622544053717" duration="1600000" />
+      <workItem from="1622544053717" duration="2201000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1620047990325</created>
