@@ -32,8 +32,9 @@ export class LoginPageComponent implements OnInit, OnDestroy {
         //зайтив систему со своими данными
       } else if (params['accessDenied']){
         //авторизуйтесь в системе
+      } else if (params['sessionFailed']){
+        //войдите в систему заново
       }
-
     })
   }
 
@@ -47,10 +48,10 @@ export class LoginPageComponent implements OnInit, OnDestroy {
     this.form.disable()
     const user = {
       login: this.form.value.login,
-      password: this.form.value.password
+      password: this.form.value.password,
     }
     this.aSub = this.auth.login(user).subscribe(
-      ()=> this.router.navigate(['/main']),
+      ()=> this.router.navigate(['/document']),
       error => {
         console.warn(error)
         this.form.enable()

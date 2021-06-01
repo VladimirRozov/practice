@@ -1,0 +1,20 @@
+
+<div class="row">
+  <div class="col s12">
+    <div class="collection" *ngIf="working_program.length !==0; else empty">
+      <a
+        *ngFor="let working of working_program"
+        [routerLink]="['/working_program', working._id]" class="collection-item">{{working.name}} - {{working.semester}}
+
+        <span>
+          <i class="material-icons" *ngIf="isAdmin">delete</i>
+        </span>
+      </a>
+    </div>
+    <ng-template #empty>
+      <div class="center">
+        Рабочие программы не загружены
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="page-title">
+  <h4>
+    <a routerLink="/educational_program">Образовательная программа</a>
+    <i class="material-icons">keyboard_arrow_right</i>
+    {{isNew ? 'Добавить':'Редактировать'}} ОП
+  </h4>
+  <span>
+            <button class="btn btn-small red" *ngIf="!isWorker || !isUser">
+              <i class="material-icons">delete</i>
+            </button>
+          </span>
+</div>
+
+<div class="row">
+  <form [formGroup]="form" class="col s12 l6" (ngSubmit)="onSubmit">
+    <div class="input-field">
+      <input formControlName="name" id="name" type="text" [disabled] = !isTeacher required [ngClass]="{'invalid': form.get('name')!.invalid && form.get('name')!.touched}">
+      <label for="name">Название</label>
+      <span class="helper-text red-text"
+            *ngIf="form.get('name')!.invalid && form.get('name')!.touched">
+          Название не может быть пустым
+      </span>
+    </div>
+
+    <div>
+      <input type="file"
+             class="dn"
+             (change)="onFileUpload($event)"
+             #inputfile>
+
+      <button
+        (click)="triggerClick()"
+        [disabled]="form.disabled"
+        type="button"
+        *ngIf="!isWorker || !isUser" class="waves-effect waves-light btn orange lighten-2 mb2">
+        <i class="material-icons left">backup</i>
+        Загрузить учебный план
+      </button>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        [disabled]="form.invalid || form.disabled"
+        *ngIf="!isWorker || !isUser" class="waves-effect waves-light btn">
+        Сохранить изменения
+      </button>
+    </div>
+    <pdf-viewer pdfSrc="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf" [render-text]="true"
+                style="display: block;"></pdf-viewer>
+  </form>
+</div>
+
+

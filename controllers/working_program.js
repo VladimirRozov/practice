@@ -3,15 +3,10 @@ const Theory = require('../models/Theory')
 const Practice = require('../models/Practice')
 const errorHandler = require('../utils/errorHandler')
 
-module.exports.getAll = async function (req,res){
+module.exports.getById = async function (req,res){
 
     try {
-        const workingProgram = await  WorkingProgram
-            .find()
-            .sort({educationalProgram: +1})
-            .skip(+req.query.offset)
-            .limit(+req.query.limit)
-
+        const workingProgram = await  WorkingProgram.find({_id: req.params.id})
         res.status(200).json(workingProgram)
     } catch (e){
         errorHandler(res, e)
@@ -19,7 +14,7 @@ module.exports.getAll = async function (req,res){
 }
 
 module.exports.getByEducationId = async function (req,res){
-    const query = {educationalProgram: req.params.educationalProgram,
+    const query = {educationalProgram: req.params.educationalProgram._id,
         user: req.user.id}
 
     try {

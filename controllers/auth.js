@@ -14,10 +14,10 @@ module.exports.login = async function (req,res){
                 role: candidate.role,
                 userId: candidate._id
             }, keys.jsonWebToken,{expiresIn: 3600})
-
             res.status(200).json({
                 message:'Вход произешел успешно',
-                token: 'Bearer ' + token
+                token: 'Bearer ' + token,
+                role: candidate.role
             })
         }else{
           res.status(401).json({

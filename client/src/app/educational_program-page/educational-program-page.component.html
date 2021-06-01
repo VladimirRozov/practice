@@ -1,0 +1,25 @@
+<div class="page-title">
+  <h4>Образовательные программы</h4>
+  <button class="waves-effect waves-light btn grey darken-1"
+  routerLink="/educational_program/new" *ngIf="isAdmin">Добавить ОП</button>
+</div>
+
+<div class="row"
+*ngIf="educational_program$ | async as educational_program; else loader">
+  <div class="col s12">
+    <div class="collection" *ngIf="educational_program.length !==0; else empty">
+      <a
+        *ngFor="let educational of educational_program"
+        [routerLink]="['/educational_program', educational._id]" class="collection-item">{{educational.number_code}} - {{educational.name}}</a>
+    </div>
+    <ng-template #empty>
+      <div class="center">
+        Образовательные программы не загружены
+      </div>>
+    </ng-template>
+  </div>
+</div>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

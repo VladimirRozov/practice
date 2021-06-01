@@ -1,2 +1,4 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 @import "theme/fullstack-theme-master/styles/styles.min.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~@ng-select/ng-select/themes/material.theme.css";

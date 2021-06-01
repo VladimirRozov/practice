@@ -51,7 +51,7 @@ module.exports.patch = async function (req,res){
             {$set: updated},
             {new: true}
         )
-        res.status(200).json(theory)
+        res.status(200).json(practice)
     } catch (e){
         errorHandler(res, e)
     }

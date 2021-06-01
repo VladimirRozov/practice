@@ -14,18 +14,28 @@ const workingProgramSchema = new Schema({
         ref: 'educationalProgram',
         type: Schema.Types.ObjectId
     },
-    competencies: [
-        {
+    competencies: [{
             code: String,
             resultEducation: String
-        }
-        ],
+        }],
     hours: [{
        section: String,
        lecture: Number,
        labs: Number,
        practice: Number,
        studWork: Number
+    }],
+    need_subject:[{
+        name: String,
+        semester: Number
+    }],
+    for_subject:[{
+        name: String,
+        semester: Number
+    }],
+    comments:[{
+            ref: 'comment',
+            type: Schema.Types.ObjectId
     }],
     user:{
         ref: 'user',

@@ -1,1 +1,22 @@
-<p>site-layout works!</p>
+<!--<nav>-->
+<!--  <div class="nav-wrapper grey darken-1">-->
+<!--    <a routerLink="/" class="brand-logo">ТРАЕКТОРИЯ+</a>-->
+<!--&lt;!&ndash;    <ul id="nav-mobile" class="right hide-on-med-and-down">&ndash;&gt;-->
+<!--&lt;!&ndash;      <li><a routerLink="/login">Вход</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;      <li><a routerLink="/register">Регистрация</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ul>&ndash;&gt;-->
+<!--  </div>-->
+<!--</nav>-->
+<ul class="sidenav sidenav-fixed a-sidenav">
+  <h4 routerLink="/document" class="brand-logo">ТРАЕКТОРИЯ+</h4>
+  <li class="bold" *ngFor="let link of links" routerLinkActive="active">
+    <a style="padding: 0 24px" [routerLink]="[link.url]" class="waves-effect waves-orange">{{link.name}}</a>
+  </li>
+
+  <li class="bold" *ngIf="isAdmin" ><a  style="padding: 0 24px" routerLink="/user" class="waves-effect waves-orange">Пользователи</a></li>
+  <li class="bold last"><a routerLink="/hello" class="waves-effect waves-orange" (click)="logout($event)">Выйти</a></li>
+</ul>
+
+<main class="content">
+  <router-outlet></router-outlet>
+</main>

@@ -1,13 +1,15 @@
 const express = require('express')
 const controller = require('../controllers/educational_program')
 const passport = require('passport')
+const upload = require('../middleware/upload')
 const router = express.Router()
 
-router.get('/', passport.authenticate('jwt', {session: false}), controller.getAll)
-router.get('/:id', passport.authenticate('jwt', {session: false}), controller.getById)
+router.get('/', controller.getAll)
+router.get('/:id', controller.getById)
+router.get('/:qualification',  controller.getByQualification)
 router.delete('/:id',passport.authenticate('jwt', {session: false}), controller.remove)
-router.post('/', passport.authenticate('jwt', {session: false}),controller.create)
-router.patch('/:id', passport.authenticate('jwt', {session: false}),controller.patch)
+router.post('/', passport.authenticate('jwt', {session: false}),upload.single('document'),controller.create)
+router.patch('/:id', passport.authenticate('jwt', {session: false}),upload.single('document'),controller.patch)
 
 
 module.exports = router

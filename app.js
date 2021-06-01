@@ -5,6 +5,8 @@ const educationalProgramRoutes = require('./routes/educational_program')
 const workingProgramRoutes = require('./routes/working_program')
 const practiceRoutes = require('./routes/practice')
 const theoryRoutes = require('./routes/theory')
+const documentRoutes = require('./routes/document')
+const userRoutes = require('./routes/user')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const keys = require('./config/keys')
@@ -31,6 +33,8 @@ app.use('/api/educational_program', educationalProgramRoutes)
 app.use('/api/working_program', workingProgramRoutes)
 app.use('/api/practice', practiceRoutes)
 app.use('/api/theory', theoryRoutes)
+app.use('/api/document', documentRoutes)
+app.use('/api/user', userRoutes)
 
 module.exports = app
 

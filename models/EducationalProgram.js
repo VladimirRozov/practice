@@ -6,6 +6,10 @@ const educationalProgramSchema = new Schema({
         type: String,
         required: true
     },
+    specialization:{
+        type: String,
+        required: true
+    },
     qualification:{
         type: String,
         required: true
@@ -13,6 +17,14 @@ const educationalProgramSchema = new Schema({
     number_code:{
         type: String,
         required: true
+    },
+    comments:[{
+        ref: 'comment',
+        type: Schema.Types.ObjectId
+    }],
+    documentSrc:{
+        type: String,
+        default:''
     },
     user:{
         ref: 'user',
