@@ -18,7 +18,7 @@ export class UserServices {
     return this.http.get<Candidate>(`/api/user/${id}`)
   }
 
-  update(candidate: Candidate, id: String): Observable<Candidate>{
+  update (candidate: Candidate, id: String): Observable<Candidate>{
     return this.http.patch<Candidate>(`/api/user/${id}`, candidate)
   }
 

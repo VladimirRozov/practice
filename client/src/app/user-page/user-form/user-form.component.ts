@@ -40,10 +40,10 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
-      user_first_name: new FormControl(null, Validators.required),
-      user_second_name: new FormControl(null, Validators.required),
-      user_description: new FormControl(null, Validators.required),
-      user_role: new FormControl(null, Validators.required)
+      first_name: new FormControl(null, Validators.required),
+      second_name: new FormControl(null, Validators.required),
+      description: new FormControl(null, Validators.required),
+      role: new FormControl(null, Validators.required)
     })
 
     this.route.params
@@ -61,10 +61,10 @@ export class UserFormComponent implements OnInit {
       .subscribe(candidate => {
         if(candidate){
           this.myForm.setValue({
-            user_first_name: candidate.first_name,
-            user_second_name: candidate.second_name,
-            user_description: candidate.description,
-            user_role: this.handlerRole(candidate.role)
+            first_name: candidate.first_name,
+            second_name: candidate.second_name,
+            description: candidate.description,
+            role: this.handlerRole(candidate.role)
           })
           this.login = candidate.login
           this.password = candidate.password
@@ -78,20 +78,19 @@ export class UserFormComponent implements OnInit {
 
 
 
-  onUpdate(){
-    this.myForm.disable()
+  onSubmit(){
     const candidate = {
       login: this.login,
       password: this.password,
       first_name: this.myForm.value.first_name,
       second_name: this.myForm.value.second_name,
-      role: this.myForm.value.role.value,
+      role: this.myForm.value.role,
       description: this.myForm.value.description
     }
 
     this.aSub = this.userService.update(candidate,this.id).subscribe(
       ()=> {
-        this.router.navigate(['/user', this.id], {
+        this.router.navigate(['/user'], {
         })
       },
       error => {

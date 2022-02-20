@@ -14,11 +14,12 @@ module.exports.getById = async function (req,res){
 }
 
 module.exports.getByEducationId = async function (req,res){
-    const query = {educationalProgram: req.params.educationalProgram._id,
-        user: req.user.id}
 
+    let path = req.url.split('/');
+    path = path[path.length - 1];
+    console.log(path)
     try {
-        const workingProgram = await WorkingProgram.find(query)
+        const workingProgram = await WorkingProgram.find({educationalProgram: path})
             .sort({semester: +1})
             .skip(+req.query.offset)
             .limit(+req.query.limit)

@@ -15,6 +15,8 @@ export class DocumentPageComponent implements OnInit {
   // @ts-ignore
   docsFGOS$: Observable<Document[]>;
   // @ts-ignore
+  docs$: Observable<Document[]>;
+  // @ts-ignore
   docsOOP$: Observable<Document[]>;
   // @ts-ignore
   docsRPD$: Observable<Document[]>;

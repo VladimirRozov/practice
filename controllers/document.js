@@ -3,8 +3,10 @@ const errorHandler = require('../utils/errorHandler')
 
 module.exports.getByChapter = async function (req,res){
     try {
+        let path = req.url.split('/');
+        path = path[path.length - 1];
         const document = await Document.find({
-            chapter: req.params.chapter,
+            chapter: path
         })
         res.status(200).json(document)
     } catch (e){
@@ -14,9 +16,8 @@ module.exports.getByChapter = async function (req,res){
 
 module.exports.getById = async function (req,res){
     try {
-        const document = await Document.find({
-            chapter: req.params.id,
-        })
+        const document = await Document.findById(req.params.id)
+        console.log(document)
         res.status(200).json(document)
     } catch (e){
         errorHandler(res, e)
@@ -33,11 +34,10 @@ module.exports.remove = async function (req,res){
 }
 
 module.exports.create = async function (req,res){
-
     const document = new Document({
         name: req.body.name,
         links: req.body.links,
-        documentSrc: req.file ? req.file.path : '',
+        documentSrc: req.body.documentSrc,
         chapter: req.body.chapter
     })
     try {

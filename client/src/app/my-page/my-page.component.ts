@@ -35,9 +35,9 @@ export class MyPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
-      user_first_name: new FormControl(null, Validators.required),
-      user_second_name: new FormControl(null, Validators.required),
-      user_description: new FormControl(null, Validators.required),
+      first_name: new FormControl(null, Validators.required),
+      second_name: new FormControl(null, Validators.required),
+      description: new FormControl(null, Validators.required),
     })
 
     this.route.params
@@ -54,9 +54,9 @@ export class MyPageComponent implements OnInit {
       .subscribe(candidate => {
         if(candidate){
           this.myForm.setValue({
-            user_first_name: candidate.first_name,
-            user_second_name: candidate.second_name,
-            user_description: candidate.description,
+            first_name: candidate.first_name,
+            second_name: candidate.second_name,
+            description: candidate.description,
           })
           this.login = candidate.login
           this.password = candidate.password
@@ -70,7 +70,6 @@ export class MyPageComponent implements OnInit {
   }
 
   onSubmit(){
-    this.myForm.disable()
      this.candidate = {
       login: this.login,
       password: this.password,
@@ -86,6 +85,7 @@ export class MyPageComponent implements OnInit {
     obs$.subscribe(
         candidate => {
           this.candidate = candidate
+          this.router.navigate(['/document'], {})
           MaterialService.toast('Изменения сохранены')
         },
         error => {

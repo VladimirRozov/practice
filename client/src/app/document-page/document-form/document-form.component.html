@@ -1,1 +1,65 @@
-<p>document-form works!</p>
+<div class="page-title">
+  <h4>
+    <a routerLink="/document">Документы</a>
+    <i class="material-icons">keyboard_arrow_right</i>
+    {{isNew ? 'Добавить':'Редактировать'}} документ
+  </h4>
+  <span>
+            <button class="btn btn-small red" *ngIf="!isNew && isAdmin" (click)="deleteDocument(document_id)">
+              <i class="material-icons">delete</i>
+            </button>
+          </span>
+</div>
+
+
+  <form [formGroup]="form" class="col s12 l6" (ngSubmit)="uploadDocument()">
+
+    <div class="input-field">
+      <input formControlName="name" id="name" type="text" required [ngClass]="{'invalid': form.get('name')!.invalid && form.get('name')!.touched}">
+      <label for="name">Название</label>
+      <span class="helper-text red-text"
+            *ngIf="form.get('name')!.invalid && form.get('name')!.touched">
+          Название не может быть пустым
+      </span>
+    </div>
+
+    <div>
+      <label for="chapter">Выбор раздела</label>
+      <ng-select [(ngModel)]="selectedChapter" formControlName="chapter" id="chapter" type="text">
+        <ng-option *ngFor="let chapter of chapter" [value]="chapter.value" required>{{chapter.name}}</ng-option>
+      </ng-select>
+    </div>
+
+    <div class="input-field">
+      <input formControlName="link" id="link" type="url">
+      <label for="link">Ссылка</label>
+    </div>
+
+    <div *ngIf="isAdmin">
+      <input type="file"
+             class="dn"
+             (change)="onFileUpload($event)"
+             #inputDoc>
+
+      <button
+        (click)="triggerClick()"
+        type="button"
+        *ngIf="isAdmin" class="waves-effect waves-light btn orange lighten-2 mb2">
+        <i class="material-icons left">backup</i>
+        Загрузить документ
+      </button>
+    </div>
+
+    <div>
+      <a *ngIf="docsPreview" [href]="docsPreview"> Документ </a>
+    </div>
+
+    <div *ngIf="isAdmin">
+      <button
+        type="submit"
+        class="waves-effect waves-light btn">
+        Сохранить изменения
+      </button>
+    </div>
+  </form>
+

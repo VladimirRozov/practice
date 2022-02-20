@@ -1,26 +1,26 @@
 <h4>Редактор пользователей</h4>
 <div class="block">
-<form [formGroup]="myForm" class="col s12 l6" (ngSubmit)="onUpdate()">
+<form [formGroup]="myForm" class="col s12 l6" (ngSubmit)="onSubmit()">
 
 
 <div class="input-field">
-  <input formControlName="user_first_name" id="user_first_name" type="text" required>
-  <label for="user_first_name">Имя:</label>
+  <input formControlName="first_name" id="first_name" type="text" required>
+  <label for="first_name">Имя:</label>
 </div>
 
 <div class="input-field">
-  <input formControlName="user_second_name" id="user_second_name" type="text" required >
-  <label for="user_second_name">Фамилия:</label>
+  <input formControlName="second_name" id="second_name" type="text" required >
+  <label for="second_name">Фамилия:</label>
 </div>
 
 <div class="input-field">
-  <input formControlName="user_description" id="user_description" type="text" required>
-  <label for="user_description">Описание:</label>
+  <input formControlName="description" id="description" type="text" required>
+  <label for="description">Описание:</label>
 </div>
 
 <div>
-  <label for="user_role">Выбор роли</label>
-  <ng-select [(ngModel)]="selectedRole" formControlName="user_role" id="user_role" type="text">
+  <label for="role">Выбор роли</label>
+  <ng-select [(ngModel)]="selectedRole" formControlName="role" id="role" type="text">
     <ng-option *ngFor="let role of role" [value]="role.value">{{role.name}}</ng-option>
   </ng-select>
 </div>

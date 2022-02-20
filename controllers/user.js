@@ -30,7 +30,10 @@ module.exports.remove = async function (req,res){
 
 module.exports.patch = async function (req,res){
     const updated = {
-        name: req.body.name
+        first_name: req.body.first_name,
+        second_name: req.body.second_name,
+        description: req.body.description,
+        role: req.body.role
     }
     try {
         const user = await User.findOneAndUpdate(

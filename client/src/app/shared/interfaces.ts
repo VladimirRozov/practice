@@ -29,7 +29,7 @@ export interface Document{
   name:string
   link: string
   documentSrc: string,
-  chapter: string
+  chapter: string,
   _id?: string
 }
 
